@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MP-EQUPAMIENTOS</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<!--Inicio del header con el menú de navegación-->
+    <header>
+        <nav class="nav">
+            <ul class="nav-menu">
+                <li> <a href="./index.html" >Inicio</a></li>
+                <li> <a href="" > Productos</a></li>
+                    <ul class="nav-submenu">
+                        <li> <a href="./banco.html">Bancos de Trabajo</a> </li>
+                        <li> <a href="./Caja.html">Cajas de Herramientas</a>  </li>
+                        <li> <a href="./mesa.html">Mesas de trabajo</a>  </li>
+                        <li> <a href="./tableros.html">Tableros</a> </li>
+
+                    </ul>
+                
+                <li class="nav-menu-li"> <a href="./Contacto.html" class="nav-menu-item">Contacto</a> </li>
+            </ul>
+        </nav>
+
+    </header>
+    <!--inicio del cuerpo de la página-->
+
+    <main class="main__contacto">
+        <h1 class="descripcion-articulo">Formulario de Contacto</h1>
+        <h4 class="descripcion-contacto">Completá el formulario y a la brevedad nos comunicaremos con usted para responder su consulta</h4>
+        <!--inicio del formulario de contacto-->
+        <form action="" class="form">
+           <div class="item-contacto">
+               <label for="nombre"> Nombre*</label>
+               <input type="text" id="name" name="nombre" placeholder="Ingrese su Nombre"/>
+            </div>
+            <div class="item-contacto">
+                <label for="apellido"> Apellido*</label>
+                <input type="text" id="surname" name="apellido" placeholder="Ingrese su Apellido"/>
+            </div>
+            <div class="item-contacto">
+                <label for="correo">Dirección de Email*</label>
+                <input type="email" id="correo" name="correo" placeholder="Ingrese su email"/>
+            </div>
+            <div class="item-contacto">
+                <label for="consulta">Ingrese su consulta</label>
+                <textarea name="consulta" id="consulta" cols="30" rows="10" placeholder="Ingrese su consulta"></textarea>
+            </div>
+            <button type="submit" class="button-contacto">Enviar</button>
+        </form>
+    </main>
+    <!--inicio del pie de página-->
+    
+    <footer>
+        <ul class="desc-footer">
+            <img src="./assets/icono-mail.png" alt="" class="icono-footer"/> 
+            <li class="footer-li">MP-Equipamientos@gmail.com</li>
+            <img src="./assets/icono-telefono.png" alt="" class="icono-footer"/>
+            <li class="footer-li">+54 9 11 0000-0000</li>
+            
+        </ul>
+        <img src="./assets/logo.jpg" class="logo-footer"/>
+    </footer>
+</body>
+</html>

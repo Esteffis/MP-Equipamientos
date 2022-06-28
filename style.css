@@ -1,0 +1,339 @@
+/*reset de propiedades generales*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1d1e33;
+    font-family: 'Lato', sans-serif;
+    min-height: 100%;
+    margin: 0;    
+}
+
+header{
+    background-color: gray;
+    height: 50px;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+li{
+    list-style-type: none; 
+}
+
+/*menu*/
+.nav{
+    display: flex;
+    justify-content:right;
+}
+.nav-menu{
+    display: flex;
+    position: relative;
+    width: 40%;
+    justify-content: space-around;
+}
+
+.nav-menu li a{
+    color: blanchedalmond;
+    font-weight: bold;
+    padding: 15px;
+    display: block;
+    margin: auto;
+}
+.nav-menu li a:hover{
+    background-color: lightgrey;
+    color: #1d1e33;
+    transition: all .3s;
+   
+}
+
+/*submenu*/
+.nav-submenu{
+    background-color: gray;
+    position: absolute;
+    display:none;
+    top:50px;
+}
+.nav-menu:hover  .nav-submenu{
+    display: block;
+}
+
+/*presentacion del logo y actividad principal (creo que se deberia hacer con GRID, pero no conozco aun la herramienta*/
+
+.presentacion{
+    display: grid; 
+    color: antiquewhite;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+.logo{
+    width: 800px;
+    height: 500px;
+    padding: 20px;
+    border-radius: 70px;
+
+}
+
+.encabezado{
+    font-weight: bold;
+    padding: 30px;
+    font-size: 6rem;
+    color: #1d1e33;
+    text-shadow: -3px 3px #ffffff, -3px -3px #ffffff, 3px -3px #ffffff, 3px 3px #f3f3f2, 6px 6px #626867;
+    
+}
+
+.descripcion{
+   padding: 30px 100px;
+   font-size: 3rem;
+   color: antiquewhite;
+   text-align: center;
+
+}
+/*sección destacados*/
+.destacados{
+    font-weight: bold;
+    padding: 30px 50px;
+    font-size: 5rem;
+    text-align: center;
+    color: antiquewhite;
+
+}
+/*ambos productos serán presentados en tarjetas*/
+.menu-articulos{
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 50px;
+}
+.caja{
+    background-color: #fff;
+    padding: 20px;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    box-shadow: 0 25px 50px -12px rgba(245, 243, 243, 0.5);
+}
+
+.img-caja{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    
+}
+
+.descrip-color{
+    font-weight: bold;
+    padding: 100px 200px;
+    font-size: 2rem;
+    text-align: center;
+    color: antiquewhite;  
+}
+.button-destacados{
+    background-color: #1d1e33;
+    color: white;
+    padding: 5px;
+    width: 50%;
+    margin: 20px 100px 0px 100px;
+}
+.button-destacados:hover{
+    cursor: pointer;
+}
+.button-formulario{
+    background-color:aliceblue;
+    color:#1d1e33;
+    padding: 5px;
+    margin: auto; 
+    font-weight: bold;
+}
+.button-formulario:hover{
+    cursor: pointer;
+}
+
+/*footer*/
+footer{
+    background-color: gray;
+    height: 80px;
+    width: 100%;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between; 
+    padding: 10;
+    align-items: center;
+
+  
+}
+
+.icono-footer{
+    height: 20px;
+    width: 25px;
+    
+}
+.logo-footer{
+    height: 60px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+footer ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10;
+    width: 40%;
+}
+
+/*comienzo el diseño para los productos .html* -para a presentación de los productos repito el formato usado en destacados*/
+.descripcion-articulo{
+    color: aliceblue;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+
+/*diseño para contacto.html*/
+.form{
+    width: 400px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #9394acb2;
+    border-radius: 10px;
+    color: antiquewhite;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    
+}
+.main__contacto{
+    background-image: url(./assets/background.png);
+    background-size: contain;
+}
+
+.descripcion-contacto{
+    color: antiquewhite;
+    padding: 20px;
+    text-align: center;
+}
+
+input{
+    margin-bottom: 10px;
+    width: 70%;
+   
+}
+.item-contacto{
+    display: flex;
+    flex-direction: column;
+}
+
+.button-contacto{
+    background-color:white;
+    color:#1d1e33;
+    width: 50%;
+    margin: 20px 100px 0px 100px;
+    font-size: 1.2rem;
+    font-weight: bold;
+ 
+}
+.button-contacto:hover{
+    cursor:pointer;
+}
+
+/*Mobile Last primero con 768 px*/
+@media (max-width: 768px){
+    /*menu*/
+    .nav{
+        justify-content:left;
+    } 
+     /*presentación + logo*/
+    .presentacion{
+        display: grid; 
+        grid-template-columns: 1fr;
+        color: antiquewhite;
+    
+        
+    }
+    .logo{
+        width: 500px;
+        height: 350px;
+        padding: 20px;
+        border-radius: 50px;
+    }
+    
+    .encabezado{
+        padding: 15px;
+        font-size: 2rem;
+        text-shadow: -1px 1px #ffffff, -1px -1px #ffffff, 1px -1px #ffffff, 1px 1px #f3f3f2, 3px 3px #626867;
+
+    }
+    
+    .descripcion{
+       padding: 15px 50px;
+       font-size: 1rem;
+    
+    }
+    /*productos destacados*/
+    .destacados{
+        padding: 15px 25px;
+        font-size: 2rem;
+    }
+       /*presentación de productos. Me afectará a la sección de destacados y a las tarjetas de productos*/
+    .menu-articulos{
+        grid-template-columns: repeat(2, 1fr);
+    }
+  
+}
+/*Mobile Last ahora con 425 px*/
+@media (max-width: 425px){
+    /*menu*/
+    .nav-menu{
+       justify-content: left;
+    }
+
+   /*presentación*/
+    .logo{
+        width: 370px;
+        height: 230px;
+        padding: 20px;
+        border-radius: 40px;
+    } 
+     /*presentación de productos. Me afectará a la sección de destacados y a las tarjetas de productos*/
+    .menu-articulos{
+        grid-template-columns: 1fr;
+    }
+    .descrip-color{
+        padding: 20px;
+        font-size: 1rem;
+    }
+    /*footer*/
+    .icono-footer{
+        height: 15px;
+        width: 20px;
+    }
+    footer ul{
+        padding: 5px;
+        width: 70%;
+    }
+    /*formulario de contacto*/
+    .form{
+        width: 300px;
+    }
+    .button-contacto{
+        margin: 20px 70px 0px 70px;
+    }
+
+   
+}
