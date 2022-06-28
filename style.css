@@ -5,11 +5,17 @@
     box-sizing: border-box;
 }
 
+html{
+    /*height: 100%;*/
+}
 body{
     background-color: #1d1e33;
     font-family: 'Lato', sans-serif;
-    min-height: 100%;
-    margin: 0;    
+    margin: 0;
+    /*min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;*/
 }
 
 header{
@@ -121,7 +127,7 @@ li{
     font-size: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     border-radius: 10px;
     box-shadow: 0 25px 50px -12px rgba(245, 243, 243, 0.5);
 }
@@ -169,10 +175,8 @@ footer{
     color: aliceblue;
     display: flex;
     justify-content: space-between; 
-    padding: 10;
-    align-items: center;
-
-  
+    padding: 10px;
+    align-items: center;  
 }
 
 .icono-footer{
@@ -184,6 +188,7 @@ footer{
     height: 60px;
     width: 100px;
     border-radius: 10px;
+   
 }
 
 footer ul{
@@ -221,6 +226,8 @@ footer ul{
 .main__contacto{
     background-image: url(./assets/background.png);
     background-size: contain;
+    height: 100vh;
+    
 }
 
 .descripcion-contacto{
