@@ -6,17 +6,18 @@
 }
 
 html{
-    /*height: 100%;*/
+    height: 100%;
 }
 body{
     background-color: #1d1e33;
     font-family: 'Lato', sans-serif;
     margin: 0;
-    /*min-height: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;*/
+  
 }
+
 
 header{
     background-color: gray;
@@ -152,16 +153,26 @@ li{
     padding: 5px;
     width: 50%;
     margin: 20px 100px 0px 100px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: font-size background-color 0.3s;
 }
 .button-destacados:hover{
     cursor: pointer;
+    font-size: 1.4rem;
+    background-color: #919196;
+
 }
 .button-formulario{
     background-color:aliceblue;
     color:#1d1e33;
     padding: 5px;
     margin: auto; 
+    border-radius: 5px;
     font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 25px 50px -12px rgba(245, 243, 243, 0.5);
 }
 .button-formulario:hover{
     cursor: pointer;
@@ -226,7 +237,7 @@ footer ul{
 .main__contacto{
     background-image: url(./assets/background.png);
     background-size: contain;
-    height: 100vh;
+    height: 100%;
     
 }
 
@@ -253,6 +264,7 @@ input{
     margin: 20px 100px 0px 100px;
     font-size: 1.2rem;
     font-weight: bold;
+   border-radius: 5px;
  
 }
 .button-contacto:hover{
