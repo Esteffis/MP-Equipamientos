@@ -19,8 +19,14 @@ body{
 }
 
 
+
 header{
-    background-color: gray;
+    background:
+    linear-gradient(
+        15deg,  #e3e3e3 15%,
+                #b5b5b5 30%,
+                #787878 70%
+    );
     height: 50px;
     width: 100%;
 }
@@ -113,7 +119,18 @@ li{
     font-size: 5rem;
     text-align: center;
     color: antiquewhite;
-
+    animation-name: animacion-destacado;
+    animation-duration:1s;
+    animation-iteration-count: infinite;
+}
+@keyframes animacion-destacado {
+    0%{
+        font-size: 5rem;
+    }
+    100%{
+        font-size: 5.5rem;
+    }
+    
 }
 /*ambos productos serán presentados en tarjetas*/
 .menu-articulos{
@@ -179,10 +196,15 @@ li{
 
 /*footer*/
 footer{
-    background-color: gray;
+    background: linear-gradient(
+        15deg, #787878 60%,
+                #757575 70%,
+                #e3e3e3 90%         
+    );
     height: 80px;
     width: 100%;
-    color: aliceblue;
+    color: antiquewhite;
+    font-weight: bold;
     display: flex;
     justify-content: space-between; 
     padding: 10px;
@@ -275,7 +297,13 @@ input{
     /*menu*/
     .nav{
         justify-content:left;
+    }
+    .nav-menu li a{
+        color: #1d1e33;
     } 
+    .nav-submenu{
+        background-color: #b5b5b5;
+    }
      /*presentación + logo*/
     .presentacion{
         display: grid; 
@@ -308,6 +336,14 @@ input{
         padding: 15px 25px;
         font-size: 2rem;
     }
+    @keyframes animacion-destacado {
+        0%{
+            font-size: 2rem;
+        }
+        100%{
+            font-size: 2.5rem;
+        }
+    }
        /*presentación de productos. Me afectará a la sección de destacados y a las tarjetas de productos*/
     .menu-articulos{
         grid-template-columns: repeat(2, 1fr);
@@ -320,7 +356,6 @@ input{
     .nav-menu{
        justify-content: left;
     }
-
    /*presentación*/
     .logo{
         width: 370px;
@@ -328,13 +363,33 @@ input{
         padding: 20px;
         border-radius: 40px;
     } 
+
+    @keyframes animacion-destacado {
+        0%{
+            font-size: 1.5rem;
+        }
+        100%{
+            font-size: 2rem;
+        }
+    }
      /*presentación de productos. Me afectará a la sección de destacados y a las tarjetas de productos*/
-    .menu-articulos{
+    
+     .menu-articulos{
         grid-template-columns: 1fr;
     }
+    .button-destacados{
+        font-size: 0.8rem; 
+    }
+    .button-destacados:hover{  
+        font-size: 1rem;
+    }
+
     .descrip-color{
         padding: 20px;
         font-size: 1rem;
+    }
+    .button-formulario{
+        font-size: 0.8rem;
     }
     /*footer*/
     .icono-footer{
