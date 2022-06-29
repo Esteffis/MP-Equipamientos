@@ -151,8 +151,8 @@ li{
     background-color: #1d1e33;
     color: white;
     padding: 5px;
-    width: 50%;
-    margin: 20px 100px 0px 100px;
+    width: 100%;
+    /*margin: 20px 100px 0px 100px;*/
     border-radius: 5px;
     font-size: 1.2rem;
     font-weight: bold;
