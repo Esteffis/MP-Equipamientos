@@ -1,0 +1,22 @@
+{
+  "name": "mp-equipamientos-estefaniaalasia",
+  "version": "1.0.0",
+  "description": "Proyecto para coder",
+  "main": "index.js",
+  "scripts": {
+    "build": "node-sass --include-path sass ./sass/index.scss ./css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Esteffis/MP-Equipamientos.git"
+  },
+  "author": "Estefania",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Esteffis/MP-Equipamientos/issues"
+  },
+  "homepage": "https://github.com/Esteffis/MP-Equipamientos#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

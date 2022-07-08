@@ -1,0 +1,33 @@
+footer{
+    background-color: $bg;
+    width: 100%;
+    color: $light;
+    padding:30px 20px;
+    margin-top: 5px;
+}
+.footer__grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap:20px;
+        justify-items: center;
+        & h4{
+            margin-bottom: 20px;
+            font-weight: bold; 
+        }
+        &-list li{
+            margin: 10px 0;
+            & a{
+                color: $light;
+                transition: color 0.3s;
+                &:hover{
+                    color: $dark  
+                } 
+            }
+        }    
+    }
+.footer-logo{
+        height: 130px;
+        width: 200px;
+        border-radius: 20px;
+    }
+     

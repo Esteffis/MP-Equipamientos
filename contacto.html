@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" rel="stylesheet"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"/>
-    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
 </head>
 <body>
 <!--Inicio del header con el menú de navegación-->
@@ -51,28 +51,28 @@
     </header>
     <!--inicio del cuerpo de la página-->
 
-    <main class="main__contacto">
-        <h1 class="descripcion-articulo">Formulario de Contacto</h1>
-        <h4 class="descripcion-contacto">Completá el formulario y a la brevedad nos comunicaremos con usted para responder su consulta</h4>
+    <main class="contacto">
+        <h1 class="contacto__presentacion">Formulario de Contacto</h1>
+        <h4 class="contacto__descripcion">Completá el formulario y a la brevedad nos comunicaremos con usted para responder su consulta</h4>
         <!--inicio del formulario de contacto-->
         <form action="" class="form">
-           <div class="item-contacto">
+           <div class="form-item">
                <label for="nombre"> Nombre*</label>
                <input type="text" id="name" name="nombre" placeholder="Ingrese su Nombre"/>
             </div>
-            <div class="item-contacto">
+            <div class="form-item">
                 <label for="apellido"> Apellido*</label>
                 <input type="text" id="surname" name="apellido" placeholder="Ingrese su Apellido"/>
             </div>
-            <div class="item-contacto">
+            <div class="form-item">
                 <label for="correo">Dirección de Email*</label>
                 <input type="email" id="correo" name="correo" placeholder="Ingrese su email"/>
             </div>
-            <div class="item-contacto">
+            <div class="form-item">
                 <label for="consulta">Ingrese su consulta</label>
                 <textarea name="consulta" id="consulta" cols="30" rows="10" placeholder="Ingrese su consulta"></textarea>
             </div>
-            <button type="submit" class="button-contacto">Enviar</button>
+            <button type="submit" class="form-button">Enviar</button>
         </form>
     </main>
     <!--inicio del pie de página-->
