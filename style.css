@@ -9,116 +9,143 @@ html{
     height: 100%;
 }
 body{
-    background-color: #1d1e33;
+    background-color:#eee;
     font-family: 'Lato', sans-serif;
     margin: 0;
     height: 100%;
     display: flex;
-    flex-direction: column;
-  
+    flex-direction: column;  
 }
+a {
+    text-decoration: none;
+  }
+  ul {
+    list-style-type: none;
+  }
 
-
-
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
 header{
-    background:
-    linear-gradient(
-        15deg,  #e3e3e3 15%,
-                #b5b5b5 30%,
-                #787878 70%
-    );
-    height: 50px;
+    background-color:gray ;
+    padding: 10px 20px;
+    height: 500px;
     width: 100%;
 }
 
-a {
-    text-decoration: none;
-}
-
-ul{
-    list-style-type: none;
-}
-li{
-    list-style-type: none; 
-}
-
 /*menu*/
-.nav{
+.header__content {
     display: flex;
-    justify-content:right;
-}
-.nav-menu{
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__logo{
+    height: 60px;
+    width: 90px;
+    border-radius: 5px;
+  }
+.header__content-navbar{
     display: flex;
-    position: relative;
-    width: 40%;
-    justify-content: space-around;
+    align-items: center;
 }
-
-.nav-menu li a{
-    color: blanchedalmond;
-    font-weight: bold;
-    padding: 15px;
+.header__content-navbar li {
+    margin: 0 15px;
     display: block;
-    margin: auto;
-}
-.nav-menu li a:hover{
-    background-color: lightgrey;
-    color: #1d1e33;
-    transition: all .3s;
-   
-}
+    transition-duration: 0.2s;
+    padding: 20px;
+  }
+
+  .header__content-navbar li:hover{
+    cursor: pointer;
+    color: #1d1e33
+  }
+  .header__content-navbar li a {
+    color: #e2e8f0;
+    font-weight: bold; 
+  }
+  .header__content-navbar li a:hover {
+    color: #1d1e33
+  }
+
+
 
 /*submenu*/
-.nav-submenu{
-    background-color: gray;
-    position: absolute;
-    display:none;
-    top:50px;
-}
-.nav-menu:hover  .nav-submenu{
+li{
     display: block;
+    position: relative;
+    transition-duration: 0.5s;
+}
+ul li ul{
+    background: gray;
+    visibility:hidden;
+    opacity: 0;
+    min-width: 5rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
+    display: none;   
+}
+ul li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover{
+    visibility: visible;
+    opacity: 1;
+    display: block; 
+}
+ul li ul li{ 
+    clear: both;
+    width: 100%
 }
 
-/*presentacion del logo y actividad principal (creo que se deberia hacer con GRID, pero no conozco aun la herramienta*/
+
+
+/*presentacion de actividad principal */
 
 .presentacion{
     display: grid; 
-    color: antiquewhite;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    justify-items: center;
+    color: #e2e8f0;
+    grid-template-columns: 1fr;
+    /*background-color: #1d1e33;*/
+    background:
+    linear-gradient(
+        15deg,  #e3e3e3 2%,
+                #787878 10%,
+                #1d1e33 25%,
+                #1d1e33 85%,
+                #787878 90%,
+                #e3e3e3 97%
+    ); 
 }
-.logo{
-    width: 800px;
-    height: 500px;
-    padding: 20px;
-    border-radius: 70px;
 
-}
-
-.encabezado{
+.presentacion__titulo{
     font-weight: bold;
     padding: 30px;
-    font-size: 6rem;
+    font-size: 5rem;
     color: #1d1e33;
     text-shadow: -3px 3px #ffffff, -3px -3px #ffffff, 3px -3px #ffffff, 3px 3px #f3f3f2, 6px 6px #626867;
     
 }
 
-.descripcion{
+.presentacion__descripcion{
    padding: 30px 100px;
-   font-size: 3rem;
-   color: antiquewhite;
+   font-size: 2rem;
+   color: #e2e8f0;
    text-align: center;
 
 }
 /*sección destacados*/
+.container__destacados{
+    height: 100px;
+}
 .destacados{
     font-weight: bold;
     padding: 30px 50px;
     font-size: 5rem;
     text-align: center;
-    color: antiquewhite;
+    color: #1d1e33;
     animation-name: animacion-destacado;
     animation-duration:1s;
     animation-iteration-count: infinite;
@@ -147,10 +174,10 @@ li{
     flex-direction: column;
     justify-content: space-between;
     border-radius: 10px;
-    box-shadow: 0 25px 50px -12px rgba(245, 243, 243, 0.5);
+    box-shadow:  0 25px 50px -12px rgba(0, 0, 0, 0.8);
 }
 
-.img-caja{
+.caja_img{
     width: 100%;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -162,7 +189,7 @@ li{
     padding: 100px 200px;
     font-size: 2rem;
     text-align: center;
-    color: antiquewhite;  
+    color: #1d1e33;  
 }
 .button-destacados{
     background-color: #1d1e33;
@@ -181,14 +208,13 @@ li{
 
 }
 .button-formulario{
-    background-color:aliceblue;
-    color:#1d1e33;
+    background-color:#1d1e33;
+    color:#e2e8f0;
     padding: 5px;
     margin: auto; 
     border-radius: 5px;
     font-weight: bold;
     font-size: 1.2rem;
-    box-shadow: 0 25px 50px -12px rgba(245, 243, 243, 0.5);
 }
 .button-formulario:hover{
     cursor: pointer;
@@ -196,44 +222,42 @@ li{
 
 /*footer*/
 footer{
-    background: linear-gradient(
-        15deg, #787878 60%,
-                #757575 70%,
-                #e3e3e3 90%         
-    );
-    height: 80px;
+    background-color: grey;
     width: 100%;
-    color: antiquewhite;
+    color: #e2e8f0;
+    padding:30px 20px;
+    margin-top: 5px;
+     
+}
+.footer__grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:20px;
+    justify-items: center;
+}
+.footer__grid h4{
+    margin-bottom: 20px;
     font-weight: bold;
-    display: flex;
-    justify-content: space-between; 
-    padding: 10px;
-    align-items: center;  
 }
+.footer__grid-list li{
+    margin: 10px 0;
+  }
+  .footer__grid-list li a{
+    color: #e2e8f0;
+    transition: color 0.3s;
+  }
+  .footer__grid-list li a:hover{
+    color: #1d1e33;
+  }
 
-.icono-footer{
-    height: 20px;
-    width: 25px;
-    
+.footer-logo{
+    height: 130px;
+    width: 200px;
+    border-radius: 20px;
 }
-.logo-footer{
-    height: 60px;
-    width: 100px;
-    border-radius: 10px;
-   
-}
-
-footer ul{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 10;
-    width: 40%;
-}
-
 /*comienzo el diseño para los productos .html* -para a presentación de los productos repito el formato usado en destacados*/
 .descripcion-articulo{
-    color: aliceblue;
+    color: #1d1e33;
     padding: 10px;
     text-align: center;
 }
@@ -248,7 +272,7 @@ footer ul{
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #9394acb2;
+    background-color: #1d1e33;
     border-radius: 10px;
     color: antiquewhite;
     padding: 10px 15px;
@@ -257,13 +281,12 @@ footer ul{
 }
 .main__contacto{
     background-image: url(./assets/background.png);
-    background-size: contain;
+    background-size:initial;
     height: 100%;
-    
 }
 
 .descripcion-contacto{
-    color: antiquewhite;
+    color:#1d1e33;
     padding: 20px;
     text-align: center;
 }
@@ -294,39 +317,17 @@ input{
 
 /*Mobile Last primero con 768 px*/
 @media (max-width: 768px){
-    /*menu*/
-    .nav{
-        justify-content:left;
-    }
-    .nav-menu li a{
-        color: #1d1e33;
-    } 
-    .nav-submenu{
-        background-color: #b5b5b5;
-    }
      /*presentación + logo*/
-    .presentacion{
-        display: grid; 
-        grid-template-columns: 1fr;
-        color: antiquewhite;
+ 
     
-        
-    }
-    .logo{
-        width: 500px;
-        height: 350px;
-        padding: 20px;
-        border-radius: 50px;
-    }
-    
-    .encabezado{
+    .presentacion__titulo{
         padding: 15px;
         font-size: 2rem;
         text-shadow: -1px 1px #ffffff, -1px -1px #ffffff, 1px -1px #ffffff, 1px 1px #f3f3f2, 3px 3px #626867;
 
     }
     
-    .descripcion{
+    .presentacion__descripcion{
        padding: 15px 50px;
        font-size: 1rem;
     
@@ -344,6 +345,9 @@ input{
             font-size: 2.5rem;
         }
     }
+    .descrip-color{
+        font-size: 1.5rem;
+    }
        /*presentación de productos. Me afectará a la sección de destacados y a las tarjetas de productos*/
     .menu-articulos{
         grid-template-columns: repeat(2, 1fr);
@@ -352,17 +356,10 @@ input{
 }
 /*Mobile Last ahora con 425 px*/
 @media (max-width: 425px){
-    /*menu*/
-    .nav-menu{
-       justify-content: left;
-    }
+    
+
    /*presentación*/
-    .logo{
-        width: 370px;
-        height: 230px;
-        padding: 20px;
-        border-radius: 40px;
-    } 
+
 
     @keyframes animacion-destacado {
         0%{
@@ -392,13 +389,13 @@ input{
         font-size: 0.8rem;
     }
     /*footer*/
-    .icono-footer{
-        height: 15px;
-        width: 20px;
+    .footer__grid{
+        grid-template-columns: 1fr;   
     }
-    footer ul{
-        padding: 5px;
-        width: 70%;
+    .footer-logo{
+        width: 100px;
+        height: 70px;
+        border-radius: 5px;
     }
     /*formulario de contacto*/
     .form{
