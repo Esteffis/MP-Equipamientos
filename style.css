@@ -28,65 +28,18 @@ a {
     margin: 0 auto;
   }
   
-header{
-    background-color:gray ;
-    padding: 10px 20px;
-    height: 100px;
-    width: 100%;
-}
+
+
 
 /*menu*/
-.header__content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .header__logo{
-    height: 60px;
-    width: 90px;
-    border-radius: 5px;
-  }
-.header__content-navbar{
-    display: flex;
-    align-items: center;
-    position: relative;
+.bg_gray{
+    background-color:gray;
     
 }
-.header__content-navbar li {
-    margin: 0 15px;
-    display: block;
-    padding: 20px;
-    transition: color 0.3s;
-  }
+.bg_gray a{
+    color:#e2e8f0;
+    font-weight: bold;
 
-  .header__content-navbar li:hover{
-    cursor: pointer;
-    color: #1d1e33
-  }
-  .header__content-navbar li a {
-    color: #e2e8f0;
-    padding: 15px;
-    font-weight: bold; 
-    display: block;
-    margin: auto;
-    transition-duration: 0.3s;
-  }
-  .header__content-navbar li a:hover {
-    color: #1d1e33;
-    background-color: #e2e8f0;
-  }
-
-
-
-/*submenu*/
-.header__content-navbar-submenu{
-    background-color: gray;
-    position: absolute;
-    display: none;
-    top: 90px;
-}
-.header__content-navbar:hover .header__content-navbar-submenu{
-    display: block;
 }
 
 
@@ -346,17 +299,17 @@ input{
 }
 /*Mobile Last ahora con 425 px*/
 @media (max-width: 425px){
-    
-
    /*presentación*/
-
-
+   .container__destacados{
+    margin-top: 20px;
+    height: 40px;
+}
     @keyframes animacion-destacado {
         0%{
-            font-size: 1.5rem;
+            font-size: 1rem;
         }
         100%{
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
     }
      /*presentación de productos. Me afectará a la sección de destacados y a las tarjetas de productos*/
@@ -379,9 +332,21 @@ input{
         font-size: 0.8rem;
     }
     /*footer*/
-    .footer__grid{
+  
+        
+      .footer__grid{
         grid-template-columns: 1fr;   
+        justify-items:flex-start;
     }
+    .footer__grid h4{
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-size: 0.8rem;
+    }
+    .footer__grid-list li{
+        margin: 5px 0;
+      }
+    
     .footer-logo{
         width: 100px;
         height: 70px;
@@ -393,7 +358,5 @@ input{
     }
     .button-contacto{
         margin: 20px 70px 0px 70px;
-    }
-
-   
+    } 
 }
