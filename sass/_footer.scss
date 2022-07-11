@@ -30,4 +30,25 @@ footer{
         width: 200px;
         border-radius: 20px;
     }
-     
+
+    /*Mobile Last con 425 px*/
+@media (max-width: 425px){
+    .footer__grid{
+        grid-template-columns: 1fr;   
+        justify-items:flex-start;
+    }
+    .footer__grid h4{
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-size: 0.8rem;
+    }
+    .footer__grid-list li{
+        margin: 5px 0;
+      }
+    
+    .footer-logo{
+        width: 100px;
+        height: 70px;
+        border-radius: 5px;
+    }
+}

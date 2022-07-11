@@ -12,7 +12,7 @@ body {
   background-color: #eee;
   font-family: 'Lato', sans-serif;
   margin: 0;
-  height: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: column; }
 
@@ -127,8 +127,8 @@ ul {
 
 /*diseño para contacto.html*/
 .contacto {
-  /*background-image: url(./);
-    background-size:initial;*/
+  background-image: url(../assets/background.png);
+  background-size: initial;
   height: 100%; }
   .contacto__presentacion {
     color: #1d1e33;
@@ -167,6 +167,60 @@ ul {
     .form-button:hover {
       cursor: pointer; }
 
+/*Mobile Last primero con 768 px*/
+@media (max-width: 768px) {
+  /*presentación + logo*/
+  .presentacion__titulo {
+    padding: 15px;
+    font-size: 2rem;
+    text-shadow: -1px 1px #ffffff, -1px -1px #ffffff, 1px -1px #ffffff, 1px 1px #f3f3f2, 3px 3px #626867; }
+  .presentacion__descripcion {
+    padding: 15px 50px;
+    font-size: 1rem; }
+  /*productos destacados*/
+  .destacados {
+    padding: 15px 25px;
+    font-size: 2rem; }
+  @keyframes animacion-destacado {
+    0% {
+      font-size: 2rem; }
+    100% {
+      font-size: 2.5rem; } }
+  .descrip-color {
+    font-size: 1.5rem; }
+  /*presentación de productos. Me afectará a la sección de destacados y a las tarjetas de productos*/
+  .menu-articulos {
+    grid-template-columns: repeat(2, 1fr); } }
+
+/*Mobile Last ahora con 425 px*/
+@media (max-width: 425px) {
+  /*presentación*/
+  .container__destacados {
+    margin-top: 20px;
+    height: 40px; }
+  @keyframes animacion-destacado {
+    0% {
+      font-size: 1rem; }
+    100% {
+      font-size: 1.5rem; } }
+  /*presentación de productos. Me afectará a la sección de destacados y a las tarjetas de productos*/
+  .menu-articulos {
+    grid-template-columns: 1fr; }
+  .caja__button {
+    font-size: 0.8rem; }
+    .caja__button:hover {
+      font-size: 1rem; }
+  .descrip-color {
+    padding: 20px;
+    font-size: 1rem; }
+    .descrip-color-button {
+      font-size: 0.8rem; }
+  /*formulario de contacto*/
+  .form {
+    width: 300px; }
+    .form-button {
+      margin: 20px 70px 0px 70px; } }
+
 footer {
   background-color: grey;
   width: 100%;
@@ -194,3 +248,19 @@ footer {
   height: 130px;
   width: 200px;
   border-radius: 20px; }
+
+/*Mobile Last con 425 px*/
+@media (max-width: 425px) {
+  .footer__grid {
+    grid-template-columns: 1fr;
+    justify-items: flex-start; }
+  .footer__grid h4 {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 0.8rem; }
+  .footer__grid-list li {
+    margin: 5px 0; }
+  .footer-logo {
+    width: 100px;
+    height: 70px;
+    border-radius: 5px; } }
