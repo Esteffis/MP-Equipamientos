@@ -100,7 +100,7 @@ ul {
     .caja__button:hover {
       cursor: pointer;
       font-size: 1.4rem;
-      background-color: #919196; }
+      opacity: 0.8; }
 
 .descrip-color {
   font-weight: bold;
@@ -117,7 +117,8 @@ ul {
     font-weight: bold;
     font-size: 1.2rem; }
     .descrip-color-button:hover {
-      cursor: pointer; }
+      cursor: pointer;
+      opacity: 0.8; }
 
 /*comienzo el diseño para los productos .html* -para a presentación de los productos repito el formato usado en destacados*/
 .descripcion-articulo {
@@ -133,7 +134,8 @@ ul {
   .contacto__presentacion {
     color: #1d1e33;
     padding: 50px;
-    text-align: center; }
+    text-align: center;
+    font-weight: bold; }
   .contacto__descripcion {
     color: #1d1e33;
     padding: 20px;
@@ -165,7 +167,8 @@ ul {
     font-weight: bold;
     border-radius: 5px; }
     .form-button:hover {
-      cursor: pointer; }
+      cursor: pointer;
+      opacity: 0.8; }
 
 /*Mobile Last primero con 768 px*/
 @media (max-width: 768px) {
