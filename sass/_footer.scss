@@ -18,7 +18,7 @@ footer{
             margin: 10px 0;
             & a{
                 color: $light;
-                transition: color 0.3s;
+                transition: $transicion;
                 &:hover{
                     color: $dark  
                 } 
