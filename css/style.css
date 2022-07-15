@@ -53,14 +53,12 @@ ul {
     text-align: center; }
 
 /*sección destacados*/
-.fuente-base, .destacados, .descrip-color, .descripcion-articulo, .contacto__presentacion {
+.destacados {
   font-weight: bold;
   text-align: center;
-  color: #1d1e33; }
-
-.destacados {
-  padding: 30px 50px;
+  color: #1d1e33;
   font-size: 5rem;
+  padding: 30px 50px;
   animation-name: animacion-destacado;
   animation-duration: 1s;
   animation-iteration-count: infinite; }
@@ -107,8 +105,11 @@ ul {
       opacity: 0.8; }
 
 .descrip-color {
-  padding: 100px 200px;
-  font-size: 2rem; }
+  font-weight: bold;
+  text-align: center;
+  color: #1d1e33;
+  font-size: 2rem;
+  padding: 100px 200px; }
   .descrip-color-button {
     margin: auto; }
     .descrip-color-button:hover {
@@ -117,6 +118,10 @@ ul {
 
 /*comienzo el diseño para los productos .html* -para a presentación de los productos repito el formato usado en destacados*/
 .descripcion-articulo {
+  font-weight: bold;
+  text-align: center;
+  color: #1d1e33;
+  font-size: "";
   padding: 10px; }
 
 /*diseño para contacto.html*/
@@ -125,6 +130,10 @@ ul {
   background-size: initial;
   height: 100%; }
   .contacto__presentacion {
+    font-weight: bold;
+    text-align: center;
+    color: #1d1e33;
+    font-size: "";
     padding: 50px; }
   .contacto__descripcion {
     color: #1d1e33;

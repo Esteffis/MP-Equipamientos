@@ -27,15 +27,17 @@
     }
 }
 /*sección destacados*/
-.fuente-base{
+@mixin fuente-base ($tamañoFuente) {
     font-weight: bold;
     text-align: center;
     color: $dark;
+    font-size: $tamañoFuente;
 }
+   
+
 .destacados{
-    @extend .fuente-base;
+    @include fuente-base(5rem);
     padding: 30px 50px;
-    font-size: 5rem;
     animation-name: animacion-destacado;
     animation-duration:1s;
     animation-iteration-count: infinite;
@@ -91,9 +93,8 @@
         }
     }
     .descrip-color{
-        @extend .fuente-base;
+        @include fuente-base(2rem);
         padding: 100px 200px;
-        font-size: 2rem;
         &-button{ 
            @extend .btn-base;
            margin: auto;
@@ -106,7 +107,7 @@
     }
     /*comienzo el diseño para los productos .html* -para a presentación de los productos repito el formato usado en destacados*/
 .descripcion-articulo{
-    @extend .fuente-base;
+    @include fuente-base('');
     padding: 10px;  
 }
 
@@ -116,7 +117,7 @@
     background-size:initial;
     height: 100%;
     &__presentacion{
-        @extend .fuente-base;
+        @include fuente-base('');
         padding: 50px;    
     }
     &__descripcion{
