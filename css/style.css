@@ -252,6 +252,18 @@ footer {
   width: 200px;
   border-radius: 20px; }
 
+.btn-envelope {
+  background-color: red;
+  border-radius: 4px; }
+
+.btn-telefono {
+  background-color: green;
+  border-radius: 4px; }
+
+.btn-instagram {
+  background-color: #d92e7f;
+  border-radius: 4px; }
+
 /*Mobile Last con 425 px*/
 @media (max-width: 425px) {
   .footer__grid {

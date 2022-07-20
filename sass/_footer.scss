@@ -30,6 +30,17 @@ footer{
         width: 200px;
         border-radius: 20px;
     }
+$contacto:(
+    envelope: red,
+    telefono:green,
+    instagram: #d92e7f,
+);
+@each $red, $color in $contacto{
+.btn-#{$red}{
+    background-color: $color;
+    border-radius: 4px;
+}
+}
 
     /*Mobile Last con 425 px*/
 @media (max-width: 425px){
