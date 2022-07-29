@@ -29,11 +29,74 @@ ul {
 .container__destacados {
   height: 100px; }
 
-.bg_gray {
-  background-color: grey; }
-  .bg_gray a {
+header {
+  background-color: grey;
+  padding: 10px 20px; }
+  header a {
     color: #e2e8f0;
     font-weight: bold; }
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .header__content-navbar {
+    align-items: center; }
+    .header__content-navbar li {
+      margin: 0 15px; }
+      .header__content-navbar li:hover > ul {
+        display: block; }
+      .header__content-navbar li a {
+        padding: 10px 15px;
+        display: block; }
+        .header__content-navbar li a:hover {
+          background-color: #e2e8f0;
+          color: #1d1e33;
+          font-weight: bolder; }
+      .header__content-navbar li ul {
+        background-color: grey;
+        display: none;
+        position: absolute;
+        padding: 0px;
+        min-width: 150px; }
+    .header__content-navbar > li {
+      float: left; }
+  .header__content-navbar-mobile {
+    display: none; }
+    .header__content-navbar-mobile:hover > ul {
+      display: block; }
+    .header__content-navbar-mobile i {
+      font-size: 35px;
+      color: #e2e8f0; }
+    .header__content-navbar-mobile ul {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 10px;
+      width: 50%;
+      background-color: grey; }
+      .header__content-navbar-mobile ul li {
+        padding: 25px 0px;
+        text-align: center; }
+        .header__content-navbar-mobile ul li ul {
+          width: 100%; }
+        .header__content-navbar-mobile ul li:hover > ul {
+          display: block; }
+        .header__content-navbar-mobile ul li a {
+          color: #e2e8f0;
+          font-weight: bold; }
+
+.header__logo {
+  height: 60px;
+  width: 100px;
+  border-radius: 10px; }
+
+/*Mobile Last con 425 px*/
+@media (max-width: 425px) {
+  .header__content-navbar {
+    display: none; }
+  .header__content-navbar-mobile {
+    display: block; } }
 
 .presentacion {
   display: grid;

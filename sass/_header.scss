@@ -1,7 +1,100 @@
-.bg_gray{
+header{
     background-color:$bg;
+    padding: 10px 20px;
     & a {
          color:$light;
         font-weight: bold;
     }    
+}
+.header__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-navbar{  
+        align-items: center;
+        li{
+            margin: 0 15px;
+            &:hover> ul{
+                display: block;
+            }
+            a{
+                padding: 10px 15px;
+                display: block;
+                
+                &:hover{
+                    background-color: $light;
+                    color: $dark;
+                    font-weight: bolder;
+                }
+            } 
+            ul{
+                background-color: $bg;
+                display: none; 
+                position: absolute;
+                padding: 0px;
+                min-width: 150px;
+            }
+        }
+        > li {
+            float: left;
+        }
+    }
+    &-navbar-mobile{
+            display: none;
+
+            &:hover > ul{
+                display: block;
+            }
+
+            i{
+               font-size: 35px;
+               color: $light;
+            }
+            ul{
+                display: none;
+                position: absolute;
+                right: 0;
+                top: 10px;
+                width: 50%;
+                background-color: $bg;
+
+                li{
+                    padding: 25px 0px;
+                    text-align: center;
+
+                    ul{
+                        width: 100%; 
+                    }
+                    &:hover > ul{
+                        display: block;
+                    }
+                    
+                    a{
+                        color: $light;
+                        font-weight: bold;
+                    }
+                }
+            }
+    }
+
+}
+
+
+.header__logo{
+    height: 60px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+/*Mobile Last con 425 px*/
+@media (max-width: 425px){
+    .header__content{
+        &-navbar{
+            display: none;
+        }
+
+        &-navbar-mobile{
+            display: block;
+        }
+    }
 }
