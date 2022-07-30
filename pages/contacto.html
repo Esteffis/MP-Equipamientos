@@ -4,24 +4,24 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Equipamientos para talleres mecánicos. Herramientas de calidad garantizada. Contamos con mesas de trabajo que son ideales para el traslado de herramientas."/>
-    <meta name="keywords" content="HTML, JS, EQUIPAMIENTOS, TALLER MECÁNICO, HERRAMIENTAS, MESAS DE TRABAJO, MESAS PARA HERRAMIENTAS, MESAS CON RUEDAS">
-    <title>MP-EQUIPAMIENTOS - Mesas de Trabajo</title>
-   
+    <meta name="description" content="Equipamientos para talleres mecánicos. Herramientas de calidad garantizada. Completá el formulario para hacer una consulta de los productos ofrecidos."/>
+    <meta name="keywords" content="HTML, JS, EQUIPAMIENTOS, TALLER MECÁNICO, HERRAMIENTAS, BANCOS DE TRABAJO, CAJAS DE HERRAMIENTAS, CAJONERAS, MESAS DE TRABAJO, TABLEROS PORTA HERRAMIENTAS, CONTACTO, FORMULARIO DE CONTACTO, ESCRIBINOS, CONTACTANOS">
+    <title>MP-EQUIPAMIENTOS - Formulario de Contacto</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" rel="stylesheet"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"/> 
-    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="../css/style.css"/>
 </head>
 <body>
-    <!--Inicio del header con el menú de navegación-->
+<!--Inicio del header con el menú de navegación-->
     <header>
         <nav class="navbar navbar-expand-lg bg_gray">
             <div class="container">
-                <a class="navbar-brand" href="./index.html">
-                    <img src="./assets/logo.jpg" class="rounded float-start" width="60" height="40" class="d-inline-block align-text-top" alt="Logo">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../assets/logo.jpg" class="rounded float-start" width="60" height="40" class="d-inline-block align-text-top" alt="Logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -29,7 +29,7 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item active px-4">
-                        <a class="nav-link" href="./index.html">Inicio </a>
+                        <a class="nav-link" href="../index.html">Inicio </a>
                         </li>
                         <li class="nav-item px-4">
                         <a class="nav-link" href="./contacto.html">Contacto</a>
@@ -51,37 +51,34 @@
         
           </nav>
     </header>
-    <!--inicio del cuerpo y contenido de la página-->
-    <main>
-        <h2 class="descripcion-articulo container">Nuestras mesas de trabajo son ideales para el traslado de tus herramientas.</h2>
-        <!--Los artículos serán mostrados como tarjetas-->
-        <div class="menu-articulos container">
-            <article class="caja">
-                <img src="./assets/mesasDeTrabajo/mesa2.jpg" alt="Mesa de Trabajo" class="caja_img"/>
-                <div class="caja_descripcion">
-                    <h5>MESA RODANTE DE 2 BANDEJAS</h5>
-          
-                    <ul>
-                        <li>Ruedas de 75mm</li>
-                        <li>Medidas:0.80 x 0.40 x 0.95 mts.</li>
-                    </ul>
-                </div>
-            </article>
-            <article class="caja"> 
-                <img src="./assets/mesasDeTrabajo/mesa-cajon.jpg" alt="Mesa de Trabajo con cajón" class="caja_img"/>   
-                <div class="caja_descripcion">
-                    <h5>MESA RODANTE DE 2 BANDEJAS c/ CAJÓN</h5>
-                
-                    <ul>
-                        <li>Ruedas 75mm</li>
-                        <li>Cajón con guías reforzadas</li>
-                        <li>Medidas:0.80 x 0.40 x 0.95 mts.</li>
-                    </ul>
-                </div>
-            </article>
-        </div>
+    <!--inicio del cuerpo de la página-->
+
+    <main class="contacto">
+        <h1 class="contacto__presentacion">Formulario de Contacto</h1>
+        <h4 class="contacto__descripcion">Completá el formulario y a la brevedad nos comunicaremos con usted para responder su consulta</h4>
+        <!--inicio del formulario de contacto-->
+        <form action="" class="form">
+           <div class="form-item">
+               <label for="nombre"> Nombre*</label>
+               <input type="text" id="name" name="nombre" placeholder="Ingrese su Nombre"/>
+            </div>
+            <div class="form-item">
+                <label for="apellido"> Apellido*</label>
+                <input type="text" id="surname" name="apellido" placeholder="Ingrese su Apellido"/>
+            </div>
+            <div class="form-item">
+                <label for="correo">Dirección de Email*</label>
+                <input type="email" id="correo" name="correo" placeholder="Ingrese su email"/>
+            </div>
+            <div class="form-item">
+                <label for="consulta">Ingrese su consulta</label>
+                <textarea name="consulta" id="consulta" cols="30" rows="10" placeholder="Ingrese su consulta"></textarea>
+            </div>
+            <button type="submit" class="form-button">Enviar</button>
+        </form>
     </main>
     <!--inicio del pie de página-->
+    
     <footer>
         <div class="footer__grid container">
             <div>
@@ -102,7 +99,7 @@
                 </ul>
 
             </div>
-            <img src="./assets/logo.jpg" alt="Logo" class="footer-logo"/>
+            <img src="../assets/logo.jpg" alt="Logo" class="footer-logo"/>
         </div>
     </footer>
     <!--links de js-->
