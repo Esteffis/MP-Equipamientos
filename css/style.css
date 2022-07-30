@@ -30,7 +30,7 @@ ul {
   height: 100px; }
 
 .bg_gray {
-  background-color: grey; }
+  background-color: #888277; }
   .bg_gray a {
     color: #e2e8f0;
     font-weight: bold; }
@@ -225,7 +225,7 @@ ul {
       margin: 20px 70px 0px 70px; } }
 
 footer {
-  background-color: grey;
+  background-color: #888277;
   width: 100%;
   color: #e2e8f0;
   padding: 30px 20px;
